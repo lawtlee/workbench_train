@@ -2,28 +2,14 @@
 title: Setup
 ---
 
-FIXME: Setup instructions live in this document. Please specify the tools and
-the data sets the Learner needs to have installed.
-
-## Data Sets
-
-<!--
-FIXME: place any data you want learners to use in `episodes/data` and then use
-       a relative link ( [data zip file](data/lesson-data.zip) ) to provide a
-       link to it, replacing the example.com link.
--->
-Download the [data zip file](https://example.com/FIXME) and unzip it to your Desktop
-
 ## Software Setup
 
 ::::::::::::::::::::::::::::::::::::::: discussion
 
 ### Details
 
-Setup for different systems can be presented in dropdown menus via a `solution`
-tag. They will join to this discussion block, so you can give a general overview
-of the software used in this lesson here and fill out the individual operating
-systems (and potentially add more, e.g. online setup) in the solutions blocks.
+The following is one way to show how to setup the Software required for this lesson. You can decide to use drop downs by using callout blocks and the `soultion` tag. To get an empty workbench
+go to [This](https://github.com/carpentries/workbench-template-rmd) repository created by Carpentries.
 
 :::::::::::::::::::::::::::::::::::::::::::::::::::
 
@@ -31,7 +17,7 @@ systems (and potentially add more, e.g. online setup) in the solutions blocks.
 
 ### Windows
 
-Use PuTTY
+Download Github and R through their respective mediums. Or, you can follow the steps listed at the official guide at [Carpentries][guide]
 
 :::::::::::::::::::::::::
 
@@ -39,7 +25,7 @@ Use PuTTY
 
 ### MacOS
 
-Use Terminal.app
+Download Github and R through their respective mediums. Or, you can follow the steps listed at the official guide at [Carpentries][guide]
 
 :::::::::::::::::::::::::
 
@@ -48,7 +34,9 @@ Use Terminal.app
 
 ### Linux
 
-Use Terminal
+Download Github and R through their respective mediums. Or, you can follow the steps listed at the official guide at [Carpentries][guide]
 
 :::::::::::::::::::::::::
+
+[guide]: https://carpentries.github.io/sandpaper-docs/index.html
 
