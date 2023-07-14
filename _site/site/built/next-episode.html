@@ -1,0 +1,114 @@
+<p>:::::::::::::::::::::::::::::::::::::: questions</p>
+
+<ul>
+  <li>How do you write a lesson using R Markdown and <code class="language-plaintext highlighter-rouge">{sandpaper}</code>?</li>
+</ul>
+
+<p>::::::::::::::::::::::::::::::::::::::::::::::::</p>
+
+<p>::::::::::::::::::::::::::::::::::::: objectives</p>
+
+<ul>
+  <li>Explain how to use markdown with the new lesson template</li>
+  <li>Demonstrate how to include pieces of code, figures, and nested challenge blocks</li>
+</ul>
+
+<p>::::::::::::::::::::::::::::::::::::::::::::::::</p>
+
+<h2 id="introduction">Introduction</h2>
+
+<p>This is a lesson created via The Carpentries Workbench. It is written in
+[Pandoc-flavored Markdown][pandoc] for static files (with extension <code class="language-plaintext highlighter-rouge">.md</code>) and
+[R Markdown][r-markdown] for dynamic files that can render code into output
+(with extension <code class="language-plaintext highlighter-rouge">.Rmd</code>). Please refer to the [Introduction to The Carpentries
+Workbench][carpentries-workbench] for full documentation.</p>
+
+<p>What you need to know is that there are three sections required for a valid
+Carpentries lesson template:</p>
+
+<ol>
+  <li><code class="language-plaintext highlighter-rouge">questions</code> are displayed at the beginning of the episode to prime the
+learner for the content.</li>
+  <li><code class="language-plaintext highlighter-rouge">objectives</code> are the learning objectives for an episode displayed with
+the questions.</li>
+  <li><code class="language-plaintext highlighter-rouge">keypoints</code> are displayed at the end of the episode to reinforce the
+objectives.</li>
+</ol>
+
+<p>:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: instructor</p>
+
+<p>Inline instructor notes can help inform instructors of timing challenges
+associated with the lessons. They appear in the “Instructor View”</p>
+
+<p>::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::</p>
+
+<p>::::::::::::::::::::::::::::::::::::: challenge</p>
+
+<h2 id="challenge-1-can-you-do-it">Challenge 1: Can you do it?</h2>
+
+<p>What is the output of this command?</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">paste</span><span class="p">(</span><span class="s2">"This"</span><span class="p">,</span><span class="w"> </span><span class="s2">"new"</span><span class="p">,</span><span class="w"> </span><span class="s2">"lesson"</span><span class="p">,</span><span class="w"> </span><span class="s2">"looks"</span><span class="p">,</span><span class="w"> </span><span class="s2">"good"</span><span class="p">)</span><span class="w">
+</span></code></pre></div></div>
+
+<p>:::::::::::::::::::::::: solution</p>
+
+<h2 id="output">Output</h2>
+
+<pre><code class="language-output">[1] "This new lesson looks good"
+</code></pre>
+
+<p>:::::::::::::::::::::::::::::::::</p>
+
+<h2 id="challenge-2-how-do-you-nest-solutions-within-challenge-blocks">Challenge 2: how do you nest solutions within challenge blocks?</h2>
+
+<p>:::::::::::::::::::::::: solution</p>
+
+<p>You can add a line with at least three colons and a <code class="language-plaintext highlighter-rouge">solution</code> tag.</p>
+
+<p>:::::::::::::::::::::::::::::::::
+::::::::::::::::::::::::::::::::::::::::::::::::</p>
+
+<h2 id="figures">Figures</h2>
+
+<p>You can include figures generated from R Markdown:</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">pie</span><span class="p">(</span><span class="w">
+  </span><span class="nf">c</span><span class="p">(</span><span class="n">Sky</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">78</span><span class="p">,</span><span class="w"> </span><span class="s2">"Sunny side of pyramid"</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">17</span><span class="p">,</span><span class="w"> </span><span class="s2">"Shady side of pyramid"</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">5</span><span class="p">),</span><span class="w"> 
+  </span><span class="n">init.angle</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">315</span><span class="p">,</span><span class="w"> 
+  </span><span class="n">col</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s2">"deepskyblue"</span><span class="p">,</span><span class="w"> </span><span class="s2">"yellow"</span><span class="p">,</span><span class="w"> </span><span class="s2">"yellow3"</span><span class="p">),</span><span class="w"> 
+  </span><span class="n">border</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">FALSE</span><span class="w">
+</span><span class="p">)</span><span class="w">
+</span></code></pre></div></div>
+
+<div class="figure" style="text-align: center">
+<img src="fig/next-episode-rendered-pyramid-1.png" alt="pie chart illusion of a pyramid" />
+<p class="caption">Sun arise each and every morning</p>
+</div>
+<p>Or you can use pandoc markdown for static figures with the following syntax:</p>
+
+<p><code class="language-plaintext highlighter-rouge">![optional caption that appears below the figure](figure url){alt='alt text for
+accessibility purposes'}</code></p>
+
+<p><img src="https://raw.githubusercontent.com/carpentries/logo/master/Badge_Carpentries.svg" alt="You belong in The Carpentries!" />{alt=’Blue Carpentries hex person logo with no text.’}</p>
+
+<h2 id="math">Math</h2>
+
+<p>One of our episodes contains $\LaTeX$ equations when describing how to create
+dynamic reports with {knitr}, so we now use mathjax to describe this:</p>
+
+<p><code class="language-plaintext highlighter-rouge">$\alpha = \dfrac{1}{(1 - \beta)^2}$</code> becomes: $\alpha = \dfrac{1}{(1 - \beta)^2}$</p>
+
+<p>Cool, right?</p>
+
+<p>::::::::::::::::::::::::::::::::::::: keypoints</p>
+
+<ul>
+  <li>Use <code class="language-plaintext highlighter-rouge">.md</code> files for episodes when you want static content</li>
+  <li>Use <code class="language-plaintext highlighter-rouge">.Rmd</code> files for episodes when you need to generate output</li>
+  <li>Run <code class="language-plaintext highlighter-rouge">sandpaper::check_lesson()</code> to identify any issues with your lesson</li>
+  <li>Run <code class="language-plaintext highlighter-rouge">sandpaper::build_lesson()</code> to preview your lesson locally</li>
+</ul>
+
+<p>::::::::::::::::::::::::::::::::::::::::::::::::</p>
+
